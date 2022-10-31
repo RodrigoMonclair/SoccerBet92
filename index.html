@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>SoccerBet 92</title>
+</head>
+<body>
+    <div id="start-screen" class="start-screen">
+        <div id="title-screen" class="title-screen">
+            <h1>THE MOST AMAZING AND FUN SPORTS BETTING SIMULATOR IN THE WORLD!</h1>
+        </div>
+        <article class="name-players" id="name-players">
+                <div id="form" class="form">
+                    <div class="player" id="player1">
+                        <label for="">Player 1:</label>
+                        <input type="text" id="name-player1" placeholder="Enter Player 1 Name" required/>
+                    </div>
+                    <div class = player id="player2">
+                        <label for=""> Player 2</label>
+                        <input type="text" id="name-player2" placeholder="Enter Player 2 Name" required/>
+                    </div>
+                    
+                    <button class="btn-enter" id="btn-enter">Play</button>
+                </div>
+        </article>   
+    </div>
+
+    <div class="game-screen hide" id="game-screen">
+        <div class="player1-side">
+            <h2>Welcome, <span id="name-player-one"></span>!</h2> 
+            <p>Choose your Team!</p>
+            <p>Credits: $<span id="credits1">20</span>,00</p>
+            <section class="shields">
+                <input type="image" src="./images/ATLETICO.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/BARCELONA.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/BAYERN.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/CHELSEA.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/JUVENTUS.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/LIVERPOOL.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/MANCHESTER CITY.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/MANCHESTER UNITED.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/PSG.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/REAL.png" border="0" alt="Submit"/>
+            </section>
+
+            <section class="bet">
+                <label for="">Score:</label>
+                <div class="score">
+                    <input type="number" class="text" id="score-num1"> <span>x</span>
+                    <input type="number" class="text" id="score-num2">
+                </div>
+                
+                <label for="">Bet-amount:</label>
+                <input type="number" class="text" id="bet-amount">
+            </section>
+
+            <button class="btn-go">Ready</button>
+        </div>
+
+        <div class="player2-side">
+            <h2>Welcome, <span id="name-player-two"></span>!</h2>
+            <p>Choose your Team!</p>
+            <p>Credits: $ <span id="credits2">20</span>,00</p>
+            <section class="shields">
+                <input type="image" id="shield1" src="./images/ATLETICO.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/BARCELONA.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/BAYERN.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/CHELSEA.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/JUVENTUS.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/LIVERPOOL.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/MANCHESTER CITY.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/MANCHESTER UNITED.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/PSG.png" border="0" alt="Submit"/>
+                <input type="image" src="./images/REAL.png" border="0" alt="Submit"/>
+            </section> 
+            <section class="bet">
+                <label for="">Score:</label>
+                <div class="score">
+                    <input type="number" class="text" id="score-num3"> <span>x</span>
+                    <input type="number" class="text" id="score-num4">
+                </div>
+                <label for="">Bet-amount:</label>
+                <input type="number" class="text" id="bet-amount">
+            </section>
+
+                <button class="btn-go">Ready</button>
+        </div>
+    </div>
+    
+
+    <!-- JS -->
+    <script src="./js/MyClasses.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+.show{
+    display: block;
+}
+
+.start-screen{
+    background-image: url('../images/soccer-players-in-action-on-professional-stadium.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.title-screen{
+    width: 40%;
+    height: 60vh;
+}
+
+h1{
+    color: rgb(210, 213, 205);
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.name-players > .form{
+    background-color: rgba(173, 176, 177, 0.6);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px 60px 30px;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    box-sizing: border-box;
+    border-radius: 23px;
+    box-shadow:   -15px 15px 43px #bcbcbc,
+    15px -15px 43px #ffffff;
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    gap:10px;
+}
+
+.player >label{
+    font-size: 1.1rem;
+}
+
+.player > input{
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 10px;
+    
+}
+
+.btn-enter{
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    right: 60px;
+    bottom:20px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(37, 36, 36);
+}
+
+.btn-enter:hover{
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid rgb(37, 36, 36);
+    color: black;
+    transition: border 1s, background-color 1s, color 1s;
+}
+
+/*transição transition: <transition-property> <transition-duration> <transition-timing-function> <transition-delay>;
+ */
+
+/* Fim da página de Entrada */
+.game-screen{
+    background-image: url("../images/estadio.png");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.game-screen p{
+    display: flex;
+    justify-content: center;
+    color: rgb(78, 75, 75);
+    
+}
+
+.shields  input {
+    width: 60px;
+    height: 60px;
+}
+
+.player1-side{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 2rem;
+    padding: 30px;
+    height: 80vh;
+    width: 470px;
+    margin-top: 20px;
+    background-color: rgba(173, 176, 177, 0.6);
+    border-radius: 10px;
+    box-shadow:  7px 7px 12px #cccccc,
+             -7px -7px 12px #f4f4f4;
+}
+
+.player2-side{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 2rem;
+    padding: 30px;
+    height: 80vh;
+    width: 470px;
+    margin-top: 20px;
+    background-color: rgba(173, 176, 177, 0.6);
+    border-radius: 10px;
+    box-shadow:  7px 7px 12px #cccccc,
+             -7px -7px 12px #f4f4f4;
+}
+
+.player21-side h2{
+    text-align: center;
+}
+
+.player2-side h2{
+    text-align: center;
+}
+.shields{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    padding-top: 50px;
+}
+
+.shields > input:hover{
+    width: 80px;
+    height: 80px;
+    transition: width 0.1s, heigth 0.1s;
+    
+}
+.bet{
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.bet  label {
+    font-weight: 700;
+    color: rgb(231, 224, 224);
+}
+
+.text{
+    height: 30px;
+    width: 60%;
+    padding: 10px;
+    background-color:  rgba(198, 208, 211, 0.6);
+    border: none;
+    border-style: inset;
+    border-radius: 10px;
+}
+
+.score{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    color: rgba(61, 65, 66, 0.6);
+    font-weight: 700;
+    padding-left: 20px;
+    width: 50%;
+}
+
+.score >input{
+    width: 80%;
+}
+
+.end{
+    position: relative;
+}
+
+.btn-go{
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    right: 50px;
+    bottom:15px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(19, 65, 107);
+}
+
+.btn-go:hover{
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid rgb(37, 36, 36);
+    color: rgb(45, 44, 44);
+    transition: border 1s, background-color 1s, color 1s;
+}
