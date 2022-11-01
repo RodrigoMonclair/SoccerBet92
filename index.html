@@ -28,22 +28,22 @@
         </article>   
     </div>
 
-    <div class="game-screen hide" id="game-screen">
+    <div class="hide" id="game-screen">
         <div class="player1-side">
             <h2>Welcome, <span id="name-player-one"></span>!</h2> 
             <p>Choose your Team!</p>
             <p>Credits: $<span id="credits1">20</span>,00</p>
             <section class="shields">
-                <input type="image" src="./images/ATLETICO.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/BARCELONA.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/BAYERN.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/CHELSEA.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/JUVENTUS.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/LIVERPOOL.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/MANCHESTER CITY.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/MANCHESTER UNITED.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/PSG.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/REAL.png" border="0" alt="Submit"/>
+                <input type="image" value="atletico" class="btn-team1" id="atletico" src="./images/ATLETICO.png" border="0" alt="button"/>
+                <input type="image" value="barcelona" class="btn-team1" id="barcelona" src="./images/BARCELONA.png" border="0" alt="button"/>
+                <input type="image" value="bayern" class="btn-team1" id="bayern" src="./images/BAYERN.png" border="0" alt="button"/>
+                <input type="image" value="chelsea" class="btn-team1" id="chelsea" src="./images/CHELSEA.png" border="0" alt="button"/>
+                <input type="image" value="juventus" class="btn-team1" id="juventus" src="./images/JUVENTUS.png" border="0" alt="button"/>
+                <input type="image" value="liverpool" class="btn-team1" id="liverpool" src="./images/LIVERPOOL.png" border="0" alt="button"/>
+                <input type="image" value="manchester city" class="btn-team1" id="manchester-city" src="./images/MANCHESTER CITY.png" border="0" alt="button"/>
+                <input type="image" value="manchester-united" class="btn-team1" id="manchester-united" src="./images/MANCHESTER UNITED.png" border="0" alt="button"/>
+                <input type="image" value="psg" class="btn-team1" id="psg" src="./images/PSG.png" border="0" alt="button"/>
+                <input type="image" value="real" class="btn-team1" id="real" src="./images/REAL.png" border="0" alt="button"/>
             </section>
 
             <section class="bet">
@@ -54,10 +54,10 @@
                 </div>
                 
                 <label for="">Bet-amount:</label>
-                <input type="number" class="text" id="bet-amount">
+                <input type="number" class="text" id="bet-amount1">
             </section>
 
-            <button class="btn-go">Ready</button>
+            <button id="btn-go1" class="btn-go">Ready</button>
         </div>
 
         <div class="player2-side">
@@ -65,16 +65,16 @@
             <p>Choose your Team!</p>
             <p>Credits: $ <span id="credits2">20</span>,00</p>
             <section class="shields">
-                <input type="image" id="shield1" src="./images/ATLETICO.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/BARCELONA.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/BAYERN.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/CHELSEA.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/JUVENTUS.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/LIVERPOOL.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/MANCHESTER CITY.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/MANCHESTER UNITED.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/PSG.png" border="0" alt="Submit"/>
-                <input type="image" src="./images/REAL.png" border="0" alt="Submit"/>
+                <input type="image"  value="atletico" class="btn-team2" id="shield1" src="./images/ATLETICO.png" border="0" alt="Submit"/>
+                <input type="image"  value="barcelona" class="btn-team2"  src="./images/BARCELONA.png" border="0" alt="Submit"/>
+                <input type="image"  value="bayern" class="btn-team2" src="./images/BAYERN.png" border="0" alt="Submit"/>
+                <input type="image"  value="chelsea" class="btn-team2" src="./images/CHELSEA.png" border="0" alt="Submit"/>
+                <input type="image"  value="juventus" class="btn-team2" src="./images/JUVENTUS.png" border="0" alt="Submit"/>
+                <input type="image"  value="liverpool" class="btn-team2" src="./images/LIVERPOOL.png" border="0" alt="Submit"/>
+                <input type="image"  value="manchester city" class="btn-team2" src="./images/MANCHESTER CITY.png" border="0" alt="Submit"/>
+                <input type="image"  value="manchester-united" class="btn-team2" src="./images/MANCHESTER UNITED.png" border="0" alt="Submit"/>
+                <input type="image"  value="psg" class="btn-team2" src="./images/PSG.png" border="0" alt="Submit"/>
+                <input type="image"  value="real" class="btn-team2" src="./images/REAL.png" border="0" alt="Submit"/>
             </section> 
             <section class="bet">
                 <label for="">Score:</label>
@@ -83,10 +83,10 @@
                     <input type="number" class="text" id="score-num4">
                 </div>
                 <label for="">Bet-amount:</label>
-                <input type="number" class="text" id="bet-amount">
+                <input type="number" class="text" id="bet-amount2">
             </section>
 
-                <button class="btn-go">Ready</button>
+                <button id="btn-go2" class="btn-go" disabled>Ready</button>
         </div>
     </div>
     
