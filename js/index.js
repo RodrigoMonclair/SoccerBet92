@@ -107,9 +107,7 @@ btnReady2.addEventListener("click", ()=>{
     
     if(betAmount2 > player2.creditos){
         alert("the amount you want to bet is greater than your credit amount")
-    } 
-    
-    if(player2.player2SelectedTeam === 0){
+    } else if(player2.player2SelectedTeam === 0){
         alert("choose a team")
     }
     else{
