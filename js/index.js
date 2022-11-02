@@ -166,7 +166,12 @@ btnReady2.addEventListener("click", ()=>{
                 btnAgain.className = "btn-again"
             }
     
-        },4000)
+        },6500)
+
+        const score1 = document.getElementById("scr1");
+        const score2 = document.getElementById("scr2");
+        score1.innerText = ""
+        score2.innerText = ""
     }
 
     // player2.getScorePlayer2(score1,score2)
