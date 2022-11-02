@@ -179,6 +179,7 @@ btnAgain.addEventListener("click", ()=>{
     player1.computedScore=[0,0]
     player1.player1SelectedTeam = 0
     player2.player2SelectedTeam = 0
+    btnReady2.disabled = true
     victorious.className = "hide"
     draw.className = "hide"
     btnAgain.className='hide'

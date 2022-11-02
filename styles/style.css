@@ -279,6 +279,10 @@ h1{
 
 }
 
+.draw > h3{
+    font-size: 3rem;
+}
+
 .btn-again{
     width: 200px;
     height: 80px;
