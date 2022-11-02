@@ -81,12 +81,18 @@ btnReady.addEventListener('click', ()=>{
     // const score2 =  document.getElementById("score-num2").value
     betAmount1 = document.getElementById("bet-amount1").value
 
-    // player1.getScorePlayer1(score1, score2)
+    if(betAmount1 > player1.creditos){
+        alert("the amount you want to bet is greater than your credit amount")
+    } else{
+        // player1.getScorePlayer1(score1, score2)
     btnReady2.disabled = false
 
 
-    console.log(player1)
-    console.log(betAmount1)
+    // console.log(player1)
+    // console.log(betAmount1)
+    }
+
+    
 })
 
 btnReady2.addEventListener("click", ()=>{
@@ -94,63 +100,68 @@ btnReady2.addEventListener("click", ()=>{
     // const score2 = document.getElementById("score-num4").value
     betAmount2 = document.getElementById("bet-amount2").value
     
+    if(betAmount2 > player2.creditos){
+        alert("the amount you want to bet is greater than your credit amount")
+    } else{
+        console.log(player2)
+        console.log(betAmount2)
+    
+        player1Side.className = "hide"
+        player2side.className = "hide" 
+        game.className = "game-start show"
+        
+        team1.src = player1.player1SelectedTeam.src
+        team2.src = player2.player2SelectedTeam.src
+        player1.startScore()
+        // score1.innerText = player1.computedScore[0]
+        // score2.innerText = player1.computedScore[1]
+        
+        
+        const afterMatch = setTimeout(()=> {
+            // time 1 vence partida
+            if(player1.computedScore[0]>player1.computedScore[1]){
+                game.className = "hide"
+                victorious.className = "show"
+                vicTeam.src = player1.player1SelectedTeam.src
+                nameVicTeam.innerText = player1.player1SelectedTeam.value
+                // player1.creditos += betAmount1
+                player1.earnCredits(betAmount1)
+                // player2.creditos -= betAmount2
+                player2.lostCredits(betAmount2)
+                credits1.innerText = player1.creditos
+                credits2.innerText = player2.creditos
+                btnAgain.className = "btn-again"
+            }
+           // time 2 vence partida
+            if(player1.computedScore[1]>player1.computedScore[0]){
+                game.className = "hide"
+                victorious.className = "show"
+                vicTeam.src = player2.player2SelectedTeam.src
+                nameVicTeam.innerText = player2.player2SelectedTeam.value
+                // player1.creditos -= betAmount1
+                player2.earnCredits(betAmount2)
+                // player2.creditos += betAmount2
+                player1.lostCredits(betAmount1)
+                credits1.innerText = player1.creditos
+                credits2.innerText = player2.creditos
+                btnAgain.className = "btn-again"
+            }
+        
+            if(player1.computedScore[1]===player1.computedScore[0]){
+                game.className = "hide"
+                draw.className = "show draw"
+                player1.bothLostCredits(betAmount1)   
+                player2.bothLostCredits(betAmount2)
+                credits1.innerText = player1.creditos
+                credits2.innerText = player2.creditos 
+                btnAgain.className = "btn-again"
+            }
+    
+        },3000)
+    }
 
     // player2.getScorePlayer2(score1,score2)
-    console.log(player2)
-    console.log(betAmount2)
-
-    player1Side.className = "hide"
-    player2side.className = "hide" 
-    game.className = "game-start show"
-    
-    team1.src = player1.player1SelectedTeam.src
-    team2.src = player2.player2SelectedTeam.src
-    player1.startScore()
-    // score1.innerText = player1.computedScore[0]
-    // score2.innerText = player1.computedScore[1]
-    
-    
-    const afterMatch = setTimeout(()=> {
-        // time 1 vence partida
-        if(player1.computedScore[0]>player1.computedScore[1]){
-            game.className = "hide"
-            victorious.className = "show"
-            vicTeam.src = player1.player1SelectedTeam.src
-            nameVicTeam.innerText = player1.player1SelectedTeam.value
-            // player1.creditos += betAmount1
-            player1.earnCredits(betAmount1)
-            // player2.creditos -= betAmount2
-            player2.lostCredits(betAmount2)
-            credits1.innerText = player1.creditos
-            credits2.innerText = player2.creditos
-            btnAgain.className = "btn-again"
-        }
-       // time 2 vence partida
-        if(player1.computedScore[1]>player1.computedScore[0]){
-            game.className = "hide"
-            victorious.className = "show"
-            vicTeam.src = player2.player2SelectedTeam.src
-            nameVicTeam.innerText = player2.player2SelectedTeam.value
-            // player1.creditos -= betAmount1
-            player2.earnCredits(betAmount2)
-            // player2.creditos += betAmount2
-            player1.lostCredits(betAmount1)
-            credits1.innerText = player1.creditos
-            credits2.innerText = player2.creditos
-            btnAgain.className = "btn-again"
-        }
-    
-        if(player1.computedScore[1]===player1.computedScore[0]){
-            game.className = "hide"
-            draw.className = "show draw"
-            player1.bothLostCredits(betAmount1)   
-            player2.bothLostCredits(betAmount2)
-            credits1.innerText = player1.creditos
-            credits2.innerText = player2.creditos 
-            btnAgain.className = "btn-again"
-        }
-
-    },3000)
+   
     
 })
 
