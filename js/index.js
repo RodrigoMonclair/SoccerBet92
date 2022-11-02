@@ -23,12 +23,16 @@ const player2side = document.querySelector(".player2-side")
 const game = document.getElementById("game")
 const team1 = document.getElementById("team1")
 const team2 = document.getElementById("team2")
-const score1 = document.getElementById("scr1")
-const score2 = document.getElementById("scr2")
+// const score1 = document.getElementById("scr1")
+// const score2 = document.getElementById("scr2")
 const victorious =  document.getElementById("victorious")
 const vicTeam = document.getElementById("vic-team")
 const draw = document.getElementById("draw")
 const btnAgain = document.getElementById("btn-again")
+const result = document.getElementById("result")
+const theEndScreen = document.getElementById("the-end")
+const nameVictorious = document.getElementById("name-victorious")
+const nameVicTeam = document.getElementById("name-vic-team")
 
 console.log(btnEnter)
 console.log(startScreen)
@@ -102,38 +106,82 @@ btnReady2.addEventListener("click", ()=>{
     team1.src = player1.player1SelectedTeam.src
     team2.src = player2.player2SelectedTeam.src
     player1.startScore()
-    score1.innerText = player1.computedScore[0]
-    score2.innerText = player1.computedScore[1]
+    // score1.innerText = player1.computedScore[0]
+    // score2.innerText = player1.computedScore[1]
     
-    if(player1.computedScore[0]>player1.computedScore[1]){
-        game.className = "hide"
-        victorious.className = "show"
-        vicTeam.src = player1.player1SelectedTeam.src
-        player1.creditos += betAmount1
-        player2.creditos -= betAmount2
-    }
+    
+    const afterMatch = setTimeout(()=> {
+        // time 1 vence partida
+        if(player1.computedScore[0]>player1.computedScore[1]){
+            game.className = "hide"
+            victorious.className = "show"
+            vicTeam.src = player1.player1SelectedTeam.src
+            nameVicTeam.innerText = player1.player1SelectedTeam.value
+            // player1.creditos += betAmount1
+            player1.earnCredits(betAmount1)
+            // player2.creditos -= betAmount2
+            player2.lostCredits(betAmount2)
+            credits1.innerText = player1.creditos
+            credits2.innerText = player2.creditos
+            btnAgain.className = "btn-again"
+        }
+       // time 2 vence partida
+        if(player1.computedScore[1]>player1.computedScore[0]){
+            game.className = "hide"
+            victorious.className = "show"
+            vicTeam.src = player2.player2SelectedTeam.src
+            nameVicTeam.innerText = player2.player1SelectedTeam.value
+            // player1.creditos -= betAmount1
+            player2.earnCredits(betAmount2)
+            // player2.creditos += betAmount2
+            player1.lostCredits(betAmount1)
+            credits1.innerText = player1.creditos
+            credits2.innerText = player2.creditos
+            btnAgain.className = "btn-again"
+        }
+    
+        if(player1.computedScore[1]===player1.computedScore[0]){
+            game.className = "hide"
+            draw.className = "show draw"
+            player1.bothLostCredits(betAmount1)   
+            player2.bothLostCredits(betAmount2)
+            credits1.innerText = player1.creditos
+            credits2.innerText = player2.creditos 
+            btnAgain.className = "btn-again"
+        }
 
-    if(player1.computedScore[1]>player1.computedScore[0]){
-        game.className = "hide"
-        victorious.className = "show"
-        vicTeam.src = player2.player2SelectedTeam.src
-        player2.creditos += betAmount2
-        player1.creditos -= betAmount1
-    }
-
-    if(player1.computedScore[1]===player1.computedScore[0]){
-        game.className = "hide"
-        draw.className = "show draw"
-        player2.creditos -= (betAmount2*0.5)
-        player1.creditos -= (betAmount1*0.5)    
-    }
+    },3000)
+    
 })
 
 btnAgain.addEventListener("click", ()=>{
+    player1.computedScore=[0,0]
     victorious.className = "hide"
     draw.className = "hide"
-    player1Side.className = "player1-side"
-    player2side.className = "player2-side"
+    btnAgain.className='hide'
+
+    if(player1.creditos <= 0){
+        theEndScreen.className = "the-end"
+        nameVictorious.innerText = player2.name
+        result.className = 'hide'
+        player1Side.className = "hide"
+        player2side.className = "hide" 
+    }
+
+    if(player2.creditos <= 0){
+        theEndScreen.className = "the-end"
+        nameVictorious.innerText = player1.name
+        result.className = 'hide'
+        player1Side.className = "hide"
+        player2side.className = "hide" 
+    }
+
+    if(player1.creditos > 0 && player2.creditos >0){
+        player1Side.className = "player1-side"
+        player2side.className = "player2-side"
+    }
+    
+
 })
 
 

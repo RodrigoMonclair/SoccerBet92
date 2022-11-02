@@ -32,7 +32,7 @@
         <div class="player1-side">
             <h2>Welcome, <span id="name-player-one"></span>!</h2> 
             <p>Choose your Team!</p>
-            <p>Credits: $<span id="credits1">20</span>,00</p>
+            <p>Credits: $<span id="credits1"></span></p>
             <section class="shields">
                 <input type="image" value="atletico" class="btn-team1" id="atletico" src="./images/ATLETICO.png" border="0" alt="button"/>
                 <input type="image" value="barcelona" class="btn-team1" id="barcelona" src="./images/BARCELONA.png" border="0" alt="button"/>
@@ -63,7 +63,7 @@
         <div class="player2-side">
             <h2>Welcome, <span id="name-player-two"></span>!</h2>
             <p>Choose your Team!</p>
-            <p>Credits: $ <span id="credits2">20</span>,00</p>
+            <p>Credits: $ <span id="credits2"></span></p>
             <section class="shields">
                 <input type="image"  value="atletico" class="btn-team2" id="atletico2" src="./images/ATLETICO.png" border="0" alt="Submit"/>
                 <input type="image"  value="barcelona" class="btn-team2" id="barcelona2"  src="./images/BARCELONA.png" border="0" alt="Submit"/>
@@ -77,7 +77,7 @@
                 <input type="image"  value="real" class="btn-team2" id="real2" src="./images/REAL.png" border="0" alt="Submit"/>
             </section> 
             <section class="bet">
-                <label for="">Score:</label>
+                <!-- <label for="">Score:</label> -->
                 <!-- <div class="score">
                     <input type="number" class="text" id="score-num3"> <span>x</span>
                     <input type="number" class="text" id="score-num4">
@@ -97,18 +97,22 @@
             
             <img src="" id="team2" alt="team 2">
         </div>
-        <div class="result">
+        <div id="result">
             <div class="hide" id="victorious">
                 <img src="" id="vic-team" alt="">
-                <p><span id="name-vic-team">xxx</span>won the match</p> 
+                <p> <span id="name-vic-team">  </span> won the match</p> 
             </div>
     
             <div id="draw" class="hide">
-                <h3>both teams scored the same</h3>
+                <h3>BOTH TEAMS SCORED THE SAME</h3>
             </div>
-            <button id="btn-again">Play Again</button>
+            <button class="hide" id="btn-again">Play Again</button>
         </div>
-        
+
+        <div class="hide" id="the-end">
+            <p><span class="name-victorious" id="name-victorious"> </span> is the Winner!</p>
+            <button onClick="window.location.reload();">Try Again!</button>
+        </div>
     </div>
 
     
