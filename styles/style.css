@@ -280,12 +280,11 @@ h1{
 }
 
 .btn-again{
-    width: 100px;
-    height: 40px;
+    width: 200px;
+    height: 80px;
     position: absolute;
     bottom:100px;
-    left: 50%;
-    right: 50%;
+    left: 75%;
     border-radius: 5px;
     color: white;
     background-color: rgb(19, 65, 107);
@@ -293,8 +292,10 @@ h1{
 
 .the-end{
     display: flex;
+    flex-direction: column;
     width: 100vh;
     height: 100vh;
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }
@@ -306,4 +307,16 @@ h1{
 }
 .the-end span{
     margin-right: 15px;
+}
+
+
+.btn-reload{
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    bottom:100px;
+    left: 75%;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(19, 65, 107);
 }
