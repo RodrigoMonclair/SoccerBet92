@@ -83,7 +83,12 @@ btnReady.addEventListener('click', ()=>{
 
     if(betAmount1 > player1.creditos){
         alert("the amount you want to bet is greater than your credit amount")
-    } else{
+    } 
+    
+    if(player1.player1SelectedTeam === 0){
+        alert ("choose a team")
+    }
+    else{
         // player1.getScorePlayer1(score1, score2)
     btnReady2.disabled = false
 
@@ -102,7 +107,12 @@ btnReady2.addEventListener("click", ()=>{
     
     if(betAmount2 > player2.creditos){
         alert("the amount you want to bet is greater than your credit amount")
-    } else{
+    } 
+    
+    if(player2.player2SelectedTeam === 0){
+        alert("choose a team")
+    }
+    else{
         console.log(player2)
         console.log(betAmount2)
     
@@ -157,7 +167,7 @@ btnReady2.addEventListener("click", ()=>{
                 btnAgain.className = "btn-again"
             }
     
-        },3000)
+        },4000)
     }
 
     // player2.getScorePlayer2(score1,score2)
@@ -167,6 +177,8 @@ btnReady2.addEventListener("click", ()=>{
 
 btnAgain.addEventListener("click", ()=>{
     player1.computedScore=[0,0]
+    player1.player1SelectedTeam = 0
+    player2.player2SelectedTeam = 0
     victorious.className = "hide"
     draw.className = "hide"
     btnAgain.className='hide'

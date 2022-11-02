@@ -6,7 +6,7 @@ class Player{
     this.creditos = 20;
     // this.player1Score = [];
     this.computedScore=[0,0];
-    this.computedSelectedTeam = [];
+    // this.computedSelectedTeam = [];
     // this.player2Score =[];
     this.player1SelectedTeam = 0;
     this.player2SelectedTeam = 0;
@@ -67,7 +67,7 @@ startScore(){
         if(selectTeam === 'team2' && confirmGoal === "goal"){
             this.computedScore[1] += 1
         }
-        
+
         score1.innerText = player1.computedScore[0]
         score2.innerText = player1.computedScore[1]
     
