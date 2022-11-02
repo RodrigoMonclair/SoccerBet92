@@ -33,6 +33,7 @@ const result = document.getElementById("result")
 const theEndScreen = document.getElementById("the-end")
 const nameVictorious = document.getElementById("name-victorious")
 const nameVicTeam = document.getElementById("name-vic-team")
+const slct1 = document.getElementById("slct1")
 
 console.log(btnEnter)
 console.log(startScreen)
@@ -63,6 +64,7 @@ function createPlayer(event){
 btnTeam1.forEach(btn => btn.addEventListener("click",()=> {
     console.log(btn)
     player1.getSelectedTeam1(btn)
+    slct1.innerText = player1.player1SelectedTeam.value
     console.log(player1)
 }))
 
@@ -70,6 +72,7 @@ btnTeam1.forEach(btn => btn.addEventListener("click",()=> {
 btnTeam2.forEach(btn2 => btn2.addEventListener("click", ()=> {
     console.log(btn2)
     player2.getSelectedTeam2(btn2)
+    slct2.innerText = player2.player2SelectedTeam.value
     console.log(player2)
 
 
@@ -83,9 +86,7 @@ btnReady.addEventListener('click', ()=>{
 
     if(betAmount1 > player1.creditos){
         alert("the amount you want to bet is greater than your credit amount")
-    } 
-    
-    if(player1.player1SelectedTeam === 0){
+    } else if(player1.player1SelectedTeam === 0){
         alert ("choose a team")
     }
     else{
@@ -178,6 +179,8 @@ btnAgain.addEventListener("click", ()=>{
     player1.player1SelectedTeam = 0
     player2.player2SelectedTeam = 0
     btnReady2.disabled = true
+    slct1.innerText = ""
+    slct2.innerText = ""
     victorious.className = "hide"
     draw.className = "hide"
     btnAgain.className='hide'

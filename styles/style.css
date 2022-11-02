@@ -186,6 +186,16 @@ h1{
     color: rgb(231, 224, 224);
 }
 
+.slct1 {
+    font-weight: 700;
+    color: rgb(44, 69, 110);
+}
+
+.slct2 {
+    font-weight: 700;
+    color: rgb(44, 69, 110);
+}
+
 .text{
     height: 30px;
     width: 30%;
