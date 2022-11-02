@@ -47,11 +47,11 @@
             </section>
 
             <section class="bet">
-                <label for="">Score:</label>
+                <!-- <label for="">Score:</label>
                 <div class="score">
                     <input type="number" class="text" id="score-num1"> <span>x</span>
                     <input type="number" class="text" id="score-num2">
-                </div>
+                </div> -->
                 
                 <label for="">Bet-amount:</label>
                 <input type="number" class="text" id="bet-amount1">
@@ -65,30 +65,53 @@
             <p>Choose your Team!</p>
             <p>Credits: $ <span id="credits2">20</span>,00</p>
             <section class="shields">
-                <input type="image"  value="atletico" class="btn-team2" id="shield1" src="./images/ATLETICO.png" border="0" alt="Submit"/>
-                <input type="image"  value="barcelona" class="btn-team2"  src="./images/BARCELONA.png" border="0" alt="Submit"/>
-                <input type="image"  value="bayern" class="btn-team2" src="./images/BAYERN.png" border="0" alt="Submit"/>
-                <input type="image"  value="chelsea" class="btn-team2" src="./images/CHELSEA.png" border="0" alt="Submit"/>
-                <input type="image"  value="juventus" class="btn-team2" src="./images/JUVENTUS.png" border="0" alt="Submit"/>
-                <input type="image"  value="liverpool" class="btn-team2" src="./images/LIVERPOOL.png" border="0" alt="Submit"/>
-                <input type="image"  value="manchester city" class="btn-team2" src="./images/MANCHESTER CITY.png" border="0" alt="Submit"/>
-                <input type="image"  value="manchester-united" class="btn-team2" src="./images/MANCHESTER UNITED.png" border="0" alt="Submit"/>
-                <input type="image"  value="psg" class="btn-team2" src="./images/PSG.png" border="0" alt="Submit"/>
-                <input type="image"  value="real" class="btn-team2" src="./images/REAL.png" border="0" alt="Submit"/>
+                <input type="image"  value="atletico" class="btn-team2" id="atletico2" src="./images/ATLETICO.png" border="0" alt="Submit"/>
+                <input type="image"  value="barcelona" class="btn-team2" id="barcelona2"  src="./images/BARCELONA.png" border="0" alt="Submit"/>
+                <input type="image"  value="bayern" class="btn-team2" id="bayern2" src="./images/BAYERN.png" border="0" alt="Submit"/>
+                <input type="image"  value="chelsea" class="btn-team2" id="chelsea2" src="./images/CHELSEA.png" border="0" alt="Submit"/>
+                <input type="image"  value="juventus" class="btn-team2" id="juventus2" src="./images/JUVENTUS.png" border="0" alt="Submit"/>
+                <input type="image"  value="liverpool" class="btn-team2" id="liverpool2" src="./images/LIVERPOOL.png" border="0" alt="Submit"/>
+                <input type="image"  value="manchester-city" class="btn-team2" id="manchester-city2" src="./images/MANCHESTER CITY.png" border="0" alt="Submit"/>
+                <input type="image"  value="manchester-united" class="btn-team2" id="manchester-united2" src="./images/MANCHESTER UNITED.png" border="0" alt="Submit"/>
+                <input type="image"  value="psg" class="btn-team2" id="psg2" src="./images/PSG.png" border="0" alt="Submit"/>
+                <input type="image"  value="real" class="btn-team2" id="real2" src="./images/REAL.png" border="0" alt="Submit"/>
             </section> 
             <section class="bet">
                 <label for="">Score:</label>
-                <div class="score">
+                <!-- <div class="score">
                     <input type="number" class="text" id="score-num3"> <span>x</span>
                     <input type="number" class="text" id="score-num4">
-                </div>
+                </div> -->
                 <label for="">Bet-amount:</label>
                 <input type="number" class="text" id="bet-amount2">
             </section>
 
                 <button id="btn-go2" class="btn-go" disabled>Ready</button>
         </div>
+        <div class="hide" id="game">
+            <img src="" id="team1" alt="team 1">
+            <div class="score">
+                <h2>Score</h2>
+                <p><span id="scr1">0</span> X <span id="scr2">0</span></p>
+            </div>
+            
+            <img src="" id="team2" alt="team 2">
+        </div>
+        <div class="result">
+            <div class="hide" id="victorious">
+                <img src="" id="vic-team" alt="">
+                <p><span id="name-vic-team">xxx</span>won the match</p> 
+            </div>
+    
+            <div id="draw" class="hide">
+                <h3>both teams scored the same</h3>
+            </div>
+            <button id="btn-again">Play Again</button>
+        </div>
+        
     </div>
+
+    
     
 
     <!-- JS -->
