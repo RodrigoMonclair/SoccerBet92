@@ -188,7 +188,7 @@ h1{
 
 .text{
     height: 30px;
-    width: 60%;
+    width: 30%;
     padding: 10px;
     color: rgb(63, 97, 152);
     font-size: 1.5rem;
@@ -306,6 +306,10 @@ h1{
 
 }
 .the-end span{
+    margin-right: 15px;
+}
+
+.result span{
     margin-right: 15px;
 }
 

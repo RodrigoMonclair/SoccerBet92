@@ -130,7 +130,7 @@ btnReady2.addEventListener("click", ()=>{
             game.className = "hide"
             victorious.className = "show"
             vicTeam.src = player2.player2SelectedTeam.src
-            nameVicTeam.innerText = player2.player1SelectedTeam.value
+            nameVicTeam.innerText = player2.player2SelectedTeam.value
             // player1.creditos -= betAmount1
             player2.earnCredits(betAmount2)
             // player2.creditos += betAmount2
