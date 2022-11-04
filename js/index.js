@@ -88,8 +88,9 @@ btnReady.addEventListener('click', ()=>{
         alert("the amount you want to bet is greater than your credit amount")
     } else if(player1.player1SelectedTeam === 0){
         alert ("choose a team")
-    }
-    else{
+    } else if (betAmount1 <= 0){
+        alert("bet some value!")
+    }else{
         // player1.getScorePlayer1(score1, score2)
     btnReady2.disabled = false
 
@@ -110,6 +111,8 @@ btnReady2.addEventListener("click", ()=>{
         alert("the amount you want to bet is greater than your credit amount")
     } else if(player2.player2SelectedTeam === 0){
         alert("choose a team")
+    } else if(betAmount2 <=0){
+        alert("bet some value!")
     }
     else{
         console.log(player2)
