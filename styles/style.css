@@ -340,7 +340,7 @@ h1{
 }
 
 
-@media all and (min-width: 457px) and (max-width: 1024px) {
+@media all and (min-width: 388px) and (max-width: 1024px) {
     .start-screen{
         height: 100vh;
         width: 100vw;
